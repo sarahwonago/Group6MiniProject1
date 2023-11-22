@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/welcomeImage"
         android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_height="360dp"
         android:src="@drawable/welcome_image"
         android:scaleType="centerCrop"
         android:contentDescription="welcome_image_description"

@@ -4,47 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:padding="10dp">
 
-
-    <!-- "Hello user, you have a greatful journey" TextView -->
     <TextView
         android:id="@+id/textViewRegisterAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Let's Register\nAccount"
+        android:layout_marginTop="50dp"
+        android:text="@string/let_s_register_naccount"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.1"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Name EditText -->
 
     <TextView
         android:id="@+id/textViewHelloUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Hello user, you have\na greatful journey"
-        android:textColor="#555555"
-        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:text="@string/hello_user_you_have_na_greatful_journey"
+        android:textColor="#000000"
+        android:lineHeight="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.1"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewRegisterAccount" />
 
-    <!-- Business Name EditText -->
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/edit_text_border"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="text"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +61,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/edit_text_border"
-        android:hint="Business Name"
+        android:hint="@string/business_name"
         android:inputType="text"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +76,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/edit_text_border"
-        android:hint="Phone"
+        android:hint="@string/phone"
         android:inputType="phone"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,14 +84,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextBusinessName" />
 
-    <!-- Password EditText -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_border"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,14 +98,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPhone" />
 
-    <!-- Sign Up Button -->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/edit_text_border"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,29 +112,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSignUp"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
+            app:cornerRadius="5dp"
             android:textColor="#FFFFFF"
-            android:background="@drawable/rounded_button"
+            android:backgroundTint="#6e77f6"
             app:layout_constraintTop_toBottomOf="@id/editTextPassword"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp"/>
 
+    <LinearLayout
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonSignUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewLogin"
+            android:textColor="@color/grey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account ? Login"
-            android:textColor="#0000FF"
-            app:layout_constraintTop_toBottomOf="@id/buttonSignUp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginEnd="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:text="@string/already_have_an_account"
+            />
+        <TextView
+            android:id="@+id/login"
+            android:textColor="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:text="@string/login"
+            />
+
+    </LinearLayout>
+
 
 
 
